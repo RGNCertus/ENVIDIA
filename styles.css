@@ -1,1 +1,7 @@
+body {
+  background-image: url('milenario.jpg');
+  background-size: cover;      
+  background-position: center; 
+  background-repeat: no-repeat;
+}
 
