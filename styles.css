@@ -4,96 +4,72 @@ body {
   background-position: center; 
   background-repeat: no-repeat;
 
-body {
+* {
     margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #222; /* Fondo de la página en modo oscuro */
-    color: #fff;
+    padding: 0;
+    box-sizing: border-box;
 }
-
+body {
+    font-family: Arial, sans-serif;
+}
+header {
+    width: 100%;
+}
 .navbar {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 15px;
-    background-color: #333; /* Color de fondo de la barra de navegación */
+    padding: 15px 20px;
+    background-color: #333; /* Gris oscuro */
 }
-
-.navbar h1 {
+.logo {
     font-size: 24px;
-    margin: 0;
-    color: #ffffff;
+    color: #fff;
+    font-weight: bold;
 }
-
-.navbar nav ul {
+.nav-links {
     display: flex;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+    list-style: none;
 }
-
-.navbar nav ul li {
-    margin-left: 20px;
+.nav-links li {
+    margin: 0 10px;
 }
-
-.navbar nav ul li a {
-    color: #ffffff;
+.nav-links a {
+    color: #fff;
     text-decoration: none;
-    font-size: 16px;
+    padding: 8px 12px;
+    transition: background-color 0.3s;
 }
-
-.navbar nav ul li a:hover {
-    color: #ddd;
+.nav-links a:hover {
+    background-color: #555; /* Color de fondo al pasar el ratón */
+    border-radius: 4px;
 }
-
-/* Estilo de la barra de búsqueda */
-.search-bar-container {
+.search-container {
     display: flex;
     align-items: center;
-    background-color: #444; /* Fondo de la barra de búsqueda */
-    border-radius: 5px;
+    background-color: #fff;
+    border-radius: 4px;
     overflow: hidden;
-    width: 200px;
 }
-
 .search-input {
-    flex: 1;
     padding: 8px;
     border: none;
     outline: none;
-    color: #ffffff;
-    background-color: #444;
+    width: 200px; /* Ancho del cuadro de búsqueda */
 }
-
 .search-button {
-    background-color: #637080; /* Color del botón de la lupa */
+    background-color: #333; /* Gris oscuro para el botón */
+    color: #fff;
     border: none;
     padding: 8px;
     cursor: pointer;
-    color: #ffffff;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-
-.dark-mode-toggle {
+.search-button:hover {
     background-color: #555;
-    color: #ffffff;
-    border: none;
-    padding: 8px 12px;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-/* Estilo de la sección principal */
-.hero-section {
-    text-align: center;
-    padding: 40px;
-    background-image: url('your-image.jpg'); /* Agrega aquí la ruta de tu imagen de fondo */
-    background-size: cover;
-    background-position: center;
-}
-
-.hero-section h2 {
-    font-size: 32px;
-    margin: 0;
 }
 
 .hero-section p {
