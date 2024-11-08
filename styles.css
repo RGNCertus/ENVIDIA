@@ -4,6 +4,7 @@ body {
   background-position: center; 
   background-repeat: no-repeat;
 
+  
 * {
     margin: 0;
     padding: 0;
@@ -20,7 +21,7 @@ header {
     align-items: center;
     justify-content: space-between;
     padding: 15px 20px;
-    background-color: #333; /* Gris oscuro */
+    background-color: #333; /* Gris oscuro oscuroso */
 }
 .logo {
     font-size: 24px;
