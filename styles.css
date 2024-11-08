@@ -13,6 +13,8 @@ body {
 
 body {
     font-family: Arial, sans-serif;
+    background-color: #1c1c1c;
+    color: #fff;
 }
 
 header {
@@ -24,7 +26,8 @@ header {
     align-items: center;
     justify-content: space-between;
     padding: 15px 20px;
-    background-color: #333; /* Gris oscuro */
+    background-color: #333;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 .logo {
@@ -39,48 +42,73 @@ header {
 }
 
 .nav-links li {
-    margin: 0 10px;
+    margin: 0 15px;
 }
 
 .nav-links a {
     color: #fff;
     text-decoration: none;
+    font-weight: 500;
     padding: 8px 12px;
-    transition: background-color 0.3s;
+    transition: color 0.3s;
 }
 
 .nav-links a:hover {
-    background-color: #555; /* Color de fondo al pasar el ratón */
-    border-radius: 4px;
+    color: #00c8ff;
 }
 
 .search-container {
     display: flex;
     align-items: center;
-    background-color: #fff;
-    border-radius: 4px;
+    background-color: #1e1e1e;
+    border-radius: 30px;
     overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
 .search-input {
-    padding: 8px;
+    padding: 10px;
     border: none;
     outline: none;
-    width: 200px; /* Ancho del cuadro de búsqueda */
+    color: #fff;
+    background-color: transparent;
+    width: 180px; /* Ajusta el ancho según sea necesario */
+    font-size: 16px;
 }
 
 .search-button {
-    background-color: #333; /* Gris oscuro para el botón */
-    color: #fff;
+    background-color: #333;
     border: none;
-    padding: 8px;
+    padding: 8px 12px;
     cursor: pointer;
-    font-size: 16px;
     display: flex;
     align-items: center;
     justify-content: center;
+    border-left: 1px solid #444; /* Línea divisoria */
 }
 
-.search-button:hover {
-    background-color: #555;
+.search-button img {
+    width: 18px;
+    height: 18px;
+    filter: invert(100%); /* Hace la lupa blanca sobre fondo oscuro */
+}
+
+.theme-toggle {
+    margin-left: 15px;
+}
+
+.toggle-button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 500;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s;
+}
+
+.toggle-button:hover {
+    background-color: #444;
 }
