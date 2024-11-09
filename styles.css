@@ -1,5 +1,7 @@
-body {
-  font-family: "PT Sans Narrow", sans-serif;
+.anton-sc-regular {
+  font-family: "Anton SC", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 body {
