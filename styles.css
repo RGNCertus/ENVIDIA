@@ -1,6 +1,6 @@
 .carrusel {
-    width: 100%;
-    max-width: 300px; 
+    width: 60%;
+    max-width: 150px; 
     margin: 0 auto;
     overflow: hidden; 
 }
@@ -11,7 +11,7 @@
 }
 
 .imagen-carrusel {
-    width: 40%; 
+    width: 25%; 
     height: auto; 
   }
 
