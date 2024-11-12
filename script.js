@@ -1,14 +1,19 @@
-let index = 0;
-const imagenes = document.querySelectorAll('.imagen-carrusel');
-const totalImagenes = imagenes.length;
+let index = 0;  
+const imagenes = document.querySelectorAll('.imagen-carrusel');  
+const totalImagenes = imagenes.length;  
 
-function moverCarrusel() {
+function mostrarImagen() {
+
+    imagenes[index].classList.remove('activa');
+    
     index++;
+    
     if (index >= totalImagenes) {
-        index = 0; 
+        index = 0;
     }
- 
-    document.querySelector('.carrusel-imagenes').style.transform = `translateX(-${index * 100}%)`;
+    
+    imagenes[index].classList.add('activa');
 }
 
-setInterval(moverCarrusel, 3000);
+mostrarImagen();
+setInterval(mostrarImagen, 3000);
