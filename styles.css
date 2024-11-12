@@ -1,19 +1,27 @@
 .carrusel {
-    width: 60%;
-    max-width: 150px; 
-    margin: 0 auto;
-    overflow: hidden; 
+    width: 25%;          
+    max-width: 150px;     
+    margin: 0 auto;      
+    overflow: hidden;     
+    position: relative;  
 }
 
-.carrusel-imagenes {
-    display: flex; 
-    transition: transform 2s ease;
+.contenedor-imagenes {
+    display: flex;
+    width: 40%;        
+    transition: transform 2s ease;  
 }
+
 
 .imagen-carrusel {
-    width: 25%; 
-    height: auto; 
-  }
+    width: 70%;       
+    height: auto;        
+    display: none;       
+}
+
+.imagen-carrusel.activa {
+    display: block;      
+}
 
 
   font-family: 'Anton SC', sans-serif;
