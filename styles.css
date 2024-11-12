@@ -140,14 +140,6 @@ header {
     background-color: transparent; 
 }
 
-.cart-icon {
-    margin-right: 15px;
-}
-
-.user-icon {
-    margin-left: 15px;
-}
-
 .cart-count {
   position: absolute;
     top: -5px;
