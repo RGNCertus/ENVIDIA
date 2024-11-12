@@ -1,4 +1,21 @@
-body {
+.carrusel {
+    width: 100%;
+    max-width: 400px; 
+    margin: 0 auto;
+    overflow: hidden; 
+}
+
+.carrusel-imagenes {
+    display: flex; 
+    transition: transform 2s ease;
+}
+
+.imagen-carrusel {
+    width: 100%; 
+    height: auto; 
+  }
+
+
   font-family: 'Anton SC', sans-serif;
 }
 
