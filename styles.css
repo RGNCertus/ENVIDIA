@@ -116,7 +116,7 @@ header {
 .toggle-button:hover {
     background-color: #444;
 }
-
+/* Iconos de carrito y usuario*/
 .icon-container {
   display: flex;
   align-items: center;
@@ -138,6 +138,14 @@ header {
     border-radius: 50%;
     padding: 0; 
     background-color: transparent; 
+}
+
+.cart-icon {
+    margin-right: 15px;
+}
+
+.user-icon {
+    margin-left: 15px;
 }
 
 .cart-count {
