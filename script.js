@@ -17,3 +17,9 @@ function mostrarImagen() {
 
 mostrarImagen();
 setInterval(mostrarImagen, 3000);
+/* Catalogo de Productos*/
+document.querySelectorAll('.producto button').forEach(button => {
+    button.addEventListener('click', function() {
+        alert('Producto añadido al carrito');
+    });
+});
