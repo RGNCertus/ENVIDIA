@@ -216,7 +216,7 @@ header {
     margin: 20px;
 }
 
-.producto {
+.producto, .producto2 {
     background-color: white;
     margin: 15px;
     padding: 20px;
@@ -226,28 +226,28 @@ header {
     text-align: center;
 }
 
-.producto img {
+.producto, .producto2 img {
     max-width: 100%;
     border-radius: 8px;
 }
 
-.producto h3 {
+.producto, .producto2 h3 {
     color: #333;
 }
 
-.producto p {
+.producto, .producto2 p {
     color: #777;
     font-size: 14px;
 }
 
-.producto span {
+.producto, .producto2 span {
     display: block;
     font-size: 20px;
     font-weight: bold;
     margin: 10px 0;
 }
 
-.producto button {
+.producto, .producto2 button {
     background-color: #28a745;
     color: white;
     border: none;
@@ -258,6 +258,11 @@ header {
     transition: background-color 0.3s ease;
 }
 
-.producto button:hover {
+.producto, .producto2 button:hover {
     background-color: #218838;
+}
+
+.producto2 {
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
