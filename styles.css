@@ -216,6 +216,11 @@ header {
     margin: 20px;
 }
 
+.producto2 {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
 .producto, .producto2 {
     background-color: white;
     margin: 15px;
@@ -260,9 +265,4 @@ header {
 
 .producto, .producto2 button:hover {
     background-color: #218838;
-}
-
-.producto2 {
-    margin-top: 30px;
-    margin-bottom: 30px;
 }
