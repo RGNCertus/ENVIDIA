@@ -53,7 +53,7 @@
         <header>
         <h1>Catálogo de Laptops</h1>
     </header>
-      <div class="catalogo">
+      <!-- <div class="catalogo">
         <div class="producto">
             <img src="1.jpg" alt="Producto 1">
             <h3>Homen uno</h3>
@@ -64,7 +64,36 @@
             PRECIO $700 </p>
             <span>$700</span>
             <button>Añadir al carrito</button>
+        </div> -->
+    <div class="catalogo">
+        <div class="producto">
+            <img src="1.jpg" alt="Producto 1">
+            <h3>Homen Uno</h3>
+            <p>Procesador core i5<br>RTX 3050<br>8GB RAM<br>1TB de almacenamiento<br>PRECIO $700</p>
+            <span>$700</span>
+            <button class="btn-detalles" data-producto="homenUno">Más información</button>
         </div>
+        
+    <div id="modalDetalles" class="modal">
+        <div class="modal-contenido">
+            <span class="cerrar">&times;</span>
+            <h2 id="modalTitulo"></h2>
+            <img id="modalImagen" src="" alt="Imagen del Producto">
+            <p id="modalDescripcion"></p>
+            <p id="modalPrecio"></p>
+            <div class="calificaciones">
+                <h4>Calificaciones de usuarios:</h4>
+                <p>⭐⭐⭐☆☆ 3.6</p>
+                <p>10,777 en total</p>
+            </div>
+            <button>Añadir al carrito</button>
+        </div>
+    </div>
+<!-- Fin -->
+        
+    <script src="script.js"></script>
+</body>
+</html>
 
         <div class="producto">
             <img src="2.jpg" alt="Producto 2">
