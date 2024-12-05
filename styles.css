@@ -50,13 +50,23 @@ header {
     width: 100%;
 }
 
-.navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 15px 20px;
+                                                    /* Barra de menu */
+nav ul {
+    list-style-type: none;
     background-color: #788;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    padding: 10px;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
 }
 
 .logo {
@@ -262,24 +272,6 @@ header {
     background-color: #218838;
 }
 
-
-                                                    /* Barra de menu */
-nav ul {
-    list-style-type: none;
-    background-color: #333;
-    padding: 10px;
-    margin: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin-right: 20px;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-}
 
                                             /* Estilos de los productos */
 .producto {
