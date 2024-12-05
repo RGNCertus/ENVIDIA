@@ -18,6 +18,7 @@
                 <li><a href="#catalog">Catalogo</a></li>
                 <li><a href="#promotions">Promociones</a></li>
                 <li><a href="#support">Soporte</a></li>
+                <li><a href="#shopping">Carrito de compras id="abrirCarrito"</a></li>
             </ul>
             <div class="search-container">
                 <input type="text" placeholder="Buscar..." class="search-input">
@@ -28,7 +29,7 @@
             <div class="icon-container">
                                                     <!-- Boton carrito de compras-->
     <div class="icon-button" data-tooltip="Carrito de compras">
-        <img src="carrito.png" alt="Carrito de compras">
+        <img src="carrito.png" id="abrirCarrito" idalt="Carrito de compras">
     </div>
     <div class="icon-button" data-tooltip="Perfil de usuario">
         <img src="user.png" alt="Usuario">
@@ -998,6 +999,18 @@
         <span>119</span>
         <button>Añadir al carrito</button>
     </div>
-</div>   
+</div>  
+
+                                                                <!-- Carrito EMERGENTEEEEES -->
+    <div id="carritoEmergente" class="modal">
+        <div class="modal-content">
+            <h2>Tu Carrito</h2>
+            <ul id="carritoLista"></ul>
+            <p>Total: $<span id="totalCarrito">0</span></p>
+            <button id="cerrarCarrito">Cerrar</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>       
 </body>
 </html>
