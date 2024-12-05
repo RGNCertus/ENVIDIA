@@ -25,63 +25,91 @@ document.querySelectorAll('.producto button').forEach(button => {
     });
 }); 
 
-                                                    /* Barra de menu */
-nav ul {
-    list-style-type: none;
-    background-color: #333;
-    padding: 10px;
-    margin: 0;
+
+// Variables globales
+let carrito = [];
+const carritoLista = document.getElementById("carritoLista");
+const totalCarrito = document.getElementById("totalCarrito");
+const abrirCarrito = document.getElementById("abrirCarrito");
+const cerrarCarrito = document.getElementById("cerrarCarrito");
+const carritoEmergente = document.getElementById("carritoEmergente");
+const botonesAgregar = document.querySelectorAll(".agregarCarrito");
+
+// Función para actualizar el carrito
+function actualizarCarrito() {
+    carritoLista.innerHTML = ''; // Limpiar la lista del carrito
+    let total = 0;
+
+    // Recorrer cada producto en el carrito
+    carrito.forEach(item => {
+        const li = document.createElement("li");
+        li.innerHTML = `${item.nombre} - $${item.precio} x ${item.cantidad} 
+            <button class="aumentar" data-id="${item.id}">+</button>
+            <button class="disminuir" data-id="${item.id}">-</button>
+            <button class="eliminar" data-id="${item.id}">Eliminar</button>`;
+        carritoLista.appendChild(li);
+
+        // Actualizar total
+        total += item.precio * item.cantidad;
+    });
+
+    // Mostrar el total en el carrito
+    totalCarrito.textContent = total.toFixed(2);
 }
 
-nav ul li {
-    display: inline;
-    margin-right: 20px;
-}
+// Función para abrir el carrito
+abrirCarrito.addEventListener("click", () => {
+    carritoEmergente.style.display = "flex";
+    actualizarCarrito();
+});
 
-nav ul li a {
-    color: white;
-    text-decoration: none;
-}
+// Función para cerrar el carrito
+cerrarCarrito.addEventListener("click", () => {
+    carritoEmergente.style.display = "none";
+});
 
-                                            /* Estilos de los productos */
-.producto {
-    display: inline-block;
-    margin: 20px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    text-align: center;
-}
+// Función para agregar un producto al carrito
+botonesAgregar.forEach(boton => {
+    boton.addEventListener("click", () => {
+        const producto = boton.parentElement;
+        const id = producto.getAttribute("data-id");
+        const nombre = producto.getAttribute("data-nombre");
+        const precio = parseFloat(producto.getAttribute("data-precio"));
 
-.producto button {
-    margin-top: 10px;
-}
+        // Verificar si el producto ya está en el carrito
+        const index = carrito.findIndex(item => item.id === id);
+        if (index === -1) {
+            carrito.push({ id, nombre, precio, cantidad: 1 });
+        } else {
+            carrito[index].cantidad++;
+        }
 
-                                        /* Estilos del carrito emergente */
-.modal {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    align-items: center;
-    justify-content: center;
-}
+        actualizarCarrito();
+    });
+});
 
-.modal-content {
-    background-color: white;
-    padding: 20px;
-    border-radius: 5px;
-    width: 300px;
-    text-align: center;
-}
+// Función para aumentar la cantidad de un producto
+carritoLista.addEventListener("click", (e) => {
+    if (e.target.classList.contains("aumentar")) {
+        const id = e.target.getAttribute("data-id");
+        const index = carrito.findIndex(item => item.id === id);
+        if (index !== -1) {
+            carrito[index].cantidad++;
+        }
+    }
 
-#carritoEmergente ul {
-    list-style-type: none;
-    padding: 0;
-}
+    if (e.target.classList.contains("disminuir")) {
+        const id = e.target.getAttribute("data-id");
+        const index = carrito.findIndex(item => item.id === id);
+        if (index !== -1 && carrito[index].cantidad > 1) {
+            carrito[index].cantidad--;
+        }
+    }
 
-#carritoEmergente li {
-    margin-bottom: 10px;
-}
+    if (e.target.classList.contains("eliminar")) {
+        const id = e.target.getAttribute("data-id");
+        carrito = carrito.filter(item => item.id !== id);
+    }
+
+    actualizarCarrito();
+});
