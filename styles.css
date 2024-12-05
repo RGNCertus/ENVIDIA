@@ -51,10 +51,13 @@ header {
 }
 
                                                     /* Barra de menu */
-nav ul {
+    nav ul {
+    align-items: center;
     list-style-type: none;
+    justify-content: space-between;
     background-color: #788;
     padding: 10px;
+    display: flex;
     margin: 0;
 }
 
