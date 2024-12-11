@@ -209,27 +209,6 @@ header {
     text-align: center;
 }
 
-.catalogo {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    gap: 20px;
-}
-
-.producto {
-    background-color: white;
-    flex: 0 1 15%;            /* Cada producto ocupará el 30% del ancho del contenedor, pero puede reducirse si es necesario */
-    box-sizing: border-box;   /* Asegura que el padding y los márgenes no alteren el tamaño */
-    text-align: center;       /* Centra el contenido del producto */
-    border: 1px solid #ddd;   /* Añade borde (opcional) */
-    padding: 10px;            /* Añade espacio interno (opcional) */
-}
-
-.producto img {
-    max-width: 100%;
-    height: auto;
-}
-
 .producto h3 {
     color: #333;
 }
@@ -245,40 +224,63 @@ header {
     font-weight: bold;
     margin: 10px 0;
 }
+                                            /* Estilo para el catálogo */
+.catalogo {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-around;
+}
+
+.producto {
+    border: 1px solid #ddd;
+    padding: 20px;
+    width: 30%;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.producto img {
+    max-width: 100%;
+    height: auto;
+}
 
 .producto button {
-    background-color: #28a745;
+    background-color: #4CAF50;
     color: white;
-    border: none;
     padding: 10px 20px;
-    border-radius: 5px;
+    border: none;
     cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.2s ease;
 }
 
 .producto button:hover {
-    background-color: #218838;
+    background-color: #45a049;
 }
 
+                                        /* Estilo para el carrito */
 .carrito {
     margin-top: 30px;
     border: 1px solid #ddd;
     padding: 20px;
-    widht: 300px;
+    width: 300px;
     position: fixed;
     top: 20px;
     right: 20px;
     background-color: #f9f9f9;
 }
 
-.carrito2 {
-    margin-button: 20px;
+.carrito h2 {
+    margin-bottom: 20px;
 }
 
 .carrito ul {
     list-style-type: none;
     padding: 0;
+}
+
+.carrito ul li {
+    margin-bottom: 10px;
+}
 
 #total {
     font-weight: bold;
@@ -286,7 +288,7 @@ header {
 }
 
 #vaciar-carrito {
-    background-color: #f444336;
+    background-color: #f44336;
     color: white;
     padding: 10px;
     border: none;
@@ -296,7 +298,3 @@ header {
 #vaciar-carrito:hover {
     background-color: #d32f2f;
 }
-    
-    
-
-    
