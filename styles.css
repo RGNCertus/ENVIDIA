@@ -217,7 +217,7 @@ header {
 }
 
 .producto {
-    background-color: white;
+    background-color: gray;
     flex: 0 1 5%;            /* Cada producto ocupará el 30% del ancho del contenedor, pero puede reducirse si es necesario */
     box-sizing: border-box;   /* Asegura que el padding y los márgenes no alteren el tamaño */
     text-align: center;       /* Centra el contenido del producto */
