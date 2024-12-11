@@ -222,7 +222,7 @@ header {
     box-sizing: border-box;   /* Asegura que el padding y los márgenes no alteren el tamaño */
     text-align: center;       /* Centra el contenido del producto */
     border: 1px solid #ddd;   /* Añade borde (opcional) */
-    padding: 5px;            /* Añade espacio interno (opcional) */
+    padding: 10px;            /* Añade espacio interno (opcional) */
 }
 
 .producto img {
@@ -250,13 +250,53 @@ header {
     background-color: #28a745;
     color: white;
     border: none;
-    padding: 10px;
+    padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.2s ease;
 }
 
 .producto button:hover {
     background-color: #218838;
 }
+
+.carrito {
+    margin-top: 30px;
+    border: 1px solid #ddd;
+    padding: 20px;
+    widht: 300px;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #f9f9f9;
+}
+
+.carrito2 {
+    margin-button: 20px;
+}
+
+.carrito ul {
+    list-style-type: none;
+    padding: 0;
+
+#total {
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+#vaciar-carrito {
+    background-color: #f444336;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+#vaciar-carrito:hover {
+    background-color: #d32f2f;
+}
+    
+    
+
+    
