@@ -49,12 +49,12 @@
 </body>
     <body>
     <div class="Productos">
-    <div class="carrusel-imagenes">
-    <img src="s23.jpg" alt="Imagen 1" class="imagen-carrusel">
-    <img src="auriculares.jpg" alt="Imagen 2" class="imagen-carrusel">
-    <img src="iphone.jpeg" alt="Imagen 3" class="imagen-carrusel">
+        <div class="carrusel-imagenes">
+            <img src="s23.jpg" alt="Imagen 1" class="imagen-carrusel">
+            <img src="auriculares.jpg" alt="Imagen 2" class="imagen-carrusel">
+            <img src="iphone.jpeg" alt="Imagen 3" class="imagen-carrusel">
     </div>
-    <script src="script.js"></script>
+        <script src="script.js"></script>
 
 </body> 
     
@@ -62,9 +62,8 @@
     <header>
     <h1>Catálogo de laptops</h1>                         <!-- CATALOGO DE LAPTOPS!-->
     </header>
-            
-        <div class="producto" data-id="1" data-nombre="Home uno" data-precio="700">
-            <div class="catalogo">
+      <div class="catalogo">
+            <div class="producto" data-id="1" data-nombre="Home uno" data-precio="700">
             <img src="1.jpg" alt="Producto 1">
             <h3>Homen uno</h3>
             <p>Procesador core i5
@@ -74,8 +73,7 @@
             PRECIO $700 </p>
             <span>$700</span>
             <button>Añadir al carrito</button>
-        </div>
-        </div>
+        </div> 
 
         <div class="producto" data-id="2" data-nombre="Homer Ferrari" data-precio="3050">
             <img src="2.jpg" alt="Producto 2">
@@ -122,7 +120,10 @@
             <span>$900</span>
             <button>Añadir al carrito</button>
         </div>
-   
+    <body>
+    <header>
+        <h1>Catálogo de Monitores</h1>
+    </header>
         <div class="producto" data-id="6" data-nombre="ASUS ROG Zephyrus G16" data-precio="900">
             <img src="ASUS ROG Zephyrus G16.png" alt="Producto 3">
             <h3>ASUS ROG Zephyrus G16</h3>
@@ -233,14 +234,7 @@
             <span>$1,800</span>
             <button>Añadir al carrito</button>
         </div>
-
-    <body>
-    <header>
-    <h1>Catálogo de Monitores</h1>                <!-- CATALOGO DE MONITORES!-->
-    </header>
-        
     <div class="producto" data-id="31" data-nombre="ASUS ROG Swift PG259QN" data-precio="1300">
-    <div class="catalogo">
     <img src="ASUS ROG Swift PG259QN.png" alt="ASUS ROG Swift PG259QN">
     <h3>ASUS ROG Swift PG259QN</h3>
     <p>Resolución Full HD<br>
@@ -251,7 +245,6 @@
     <span>$1,300</span>
     <button>Añadir al carrito</button>
     <script src="script.js"></script>
-</div>
 </div>
 
 <div class="producto" data-id="32" data-nombre="Dell UltraSharp U2723QE" data-precio="700">
@@ -395,22 +388,22 @@
         <span>$1,300</span>
         <button>Añadir al carrito</button>
     </div>
-        
+</body>
+
     <body>
     <header>
-    <h1>Catálogo de Componentes</h1>             <!-- CATALOGO DE COMPONENTES!-->
+    <h1>Catálogo de Componentes</h1>
     </header>
 
     <div class="producto" data-id="46" data-nombre="San Disk" data-precio="200">
-    <div class="catalogo">
-    <img src="SSD1.jpg" alt="Producto 1">
-    <h3>San Disk</h3>
-    <p>SSD<br>
-    SATA 500G 2.5 32GB<br>
-    PRECIO $200</p>
-    <span>$200</span>
-    <button>Añadir al carrito</button>
-    </div>
+        <img src="SSD1.jpg" alt="Producto 1">
+        <h3>San Disk</h3>
+            <p>SSD<br>
+            SATA 500G 2.5 32GB<br>
+        PRECIO $200</p>
+        <span>$200</span>
+        <button>Añadir al carrito</button>
+
     </div>
     <div class="producto" data-id="47" data-nombre="Kingston" data-precio="329">
         <img src="SSD2.jpg" alt="Producto 2">
@@ -683,14 +676,12 @@
         PRECIO $389</p>
         <span>389</span>
         <button>Añadir al carrito</button>
-    </div>  
-        
+    </div>      
     <body>
     <header>
     <h1>Catálogo de Accesorios</h1>                        <!--CATÁLOGO DE ACCESORIOS!-->
     </header>
    <div class="producto" data-id="77" data-nombre="SmartWatch iOS" data-precio="299">
-        <div class="catalogo">
         <img src="sw1.jpeg" alt="SmartWatch iOS">
         <h3>SmartWatch iOS</h3>
         <p>Pantalla AMOLED 1.5"</p>
@@ -699,7 +690,6 @@
         <p>PRECIO $299</p>
         <span>299</span>
         <button>Añadir al carrito</button>
-    </div>
     </div>
 
     <div class="producto" data-id="78" data-nombre="SmartWatch iOS 2.0" data-precio="349">
@@ -855,21 +845,20 @@
         <span>119</span>
         <button>Añadir al carrito</button>
     </div>
-        
-    <body>    
+         
+    <body>
     <header>                                <!--CATÁLOGO DE CELULARES!-->
     <h1>Catálogo de Celulares</h1>
     </header>
         
     <div class="producto" data-id="16" data-nombre="Iphone 16 Pro Max" data-precio="2000">
-    <div class="catalogo">
+    <div class="producto">
     <img src="cel1.jpg" alt="Producto 1">
     <h3>Iphone 16 Pro Max</h3>
     <p>Almacenamiento 512gb 12gb ram
     PRECIO $2000</p>
     <span>$2000</span>
     <button>Añadir al carrito</button>
-    </div>
     </div>
         
     <div class="producto" data-id="17" data-nombre="Moto G34" data-precio="3050">
@@ -1016,12 +1005,6 @@
     <h3>Huawei P60 Pro</h3>
     <p>Procesador Snapdragon 8+ Gen 1<br>
     12GB RAM<br>
-    512GB de almacenamiento<br>
-    PRECIO $1,300</p>
-    <span>$1,300</span>
-    <button>Añadir al carrito</button>
-    </div>
-
                                                                 <!-- Carrito EMERGENTEEEEES -->
 <div id="carritoEmergente" class="modal">
 <div class="modal-content">
