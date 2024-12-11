@@ -217,12 +217,12 @@ header {
 }
 
 .producto {
-    background-color: gray;
-    flex: 0 1 5%;            /* Cada producto ocupará el 30% del ancho del contenedor, pero puede reducirse si es necesario */
+    background-color: white;
+    flex: 0 1 15%;            /* Cada producto ocupará el 30% del ancho del contenedor, pero puede reducirse si es necesario */
     box-sizing: border-box;   /* Asegura que el padding y los márgenes no alteren el tamaño */
     text-align: center;       /* Centra el contenido del producto */
     border: 1px solid #ddd;   /* Añade borde (opcional) */
-    padding: 1px;            /* Añade espacio interno (opcional) */
+    padding: 5px;            /* Añade espacio interno (opcional) */
 }
 
 .producto img {
