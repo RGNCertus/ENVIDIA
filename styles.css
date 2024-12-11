@@ -212,23 +212,22 @@ header {
 .catalogo {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    margin: 20px;
+    justify-content: space-around;
+    gap: 20px;
 }
 
 .producto {
     background-color: white;
-    margin: 15px;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 200px;
-    text-align: center;
+    flex: 0 1 30%;            /* Cada producto ocupará el 30% del ancho del contenedor, pero puede reducirse si es necesario */
+    box-sizing: border-box;   /* Asegura que el padding y los márgenes no alteren el tamaño */
+    text-align: center;       /* Centra el contenido del producto */
+    border: 1px solid #ddd;   /* Añade borde (opcional) */
+    padding: 10px;            /* Añade espacio interno (opcional) */
 }
 
 .producto img {
     max-width: 100%;
-    border-radius: 8px;
+    height: auto;
 }
 
 .producto h3 {
