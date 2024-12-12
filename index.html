@@ -1,6 +1,52 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Búsqueda de Productos</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- Librería jQuery -->
+</head>
+<body>
+    <div>
+        <h2>Buscar Productos</h2>
+        <input type="text" id="searchInput" placeholder="Escribe el nombre del producto..." onkeyup="searchProducts()">
+        <ul id="productList"></ul> <!-- Resultados de búsqueda -->
+    </div>
+
+    <script>
+       
+        function searchProducts() {
+            var query = document.getElementById('searchInput').value; 
+            if (query.length >= 3) { 
+                $.ajax({
+                    url: 'buscar_producto.php',  
+                    method: 'GET',
+                    data: { searchQuery: query },
+                    success: function(response) {
+                        displayResults(response);
+                    }
+                });
+            } else {
+                document.getElementById('productList').innerHTML = ''; 
+            }
+        }
+
+      
+        function displayResults(response) {
+            var products = JSON.parse(response); 
+            var output = '';
+            if (products.length > 0) {
+                products.forEach(function(product) {
+                    output += `<li>${product.name}</li>`;
+                });
+            } else {
+                output = '<li>No se encontraron productos.</li>';
+            }
+            document.getElementById('productList').innerHTML = output;
+        }
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Anton+SC&family=PT+Sans+Narrow:wght@400;700&display=swap" rel="stylesheet">
