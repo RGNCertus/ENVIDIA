@@ -3,7 +3,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     var btnRegistro = document.getElementById('btnRegistro');
     btnRegistro.addEventListener('click', function() {
-        window.location.href = 'https://github.com/RGNCertus/ENVIDIA/blob/main/index2.html';
+        window.open('https://github.com/RGNCertus/ENVIDIA/blob/main/index2.html');
     });
 });
 
