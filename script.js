@@ -61,3 +61,46 @@ document.querySelectorAll('.agregar-carrito').forEach(button => {
 });
 
 vaciarCarritoBtn.addEventListener('click', vaciarCarrito);
+
+
+
+
+
+
+
+
+
+// server.js (Node.js con Express)
+const express = require('express');
+const app = express();
+const mysql = require('mysql');
+
+const db = mysql.createConnection({
+    host: 'localhost',
+    user: 'usuario',
+    password: 'contraseña',
+    database: 'basededatos'
+});
+
+db.connect((err) => {
+    if (err) throw err;
+    console.log('Conectado a la base de datos');
+});
+
+app.get('/buscar_producto', (req, res) => {
+    const searchQuery = req.query.searchQuery;
+    if (searchQuery) {
+        const query = `SELECT name FROM products WHERE name LIKE ? LIMIT 10`;
+        db.query(query, [`%${searchQuery}%`], (err, results) => {
+            if (err) throw err;
+            res.json(results);
+        });
+    } else {
+        res.json([]);
+    }
+});
+
+app.listen(3000, () => {
+    console.log('Servidor corriendo en http://localhost:3000');
+});
+
