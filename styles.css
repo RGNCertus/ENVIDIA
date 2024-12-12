@@ -12,17 +12,42 @@
     transition: transform 2s ease;  
 }
 
-
-.imagen-carrusel {
+.imagen {
     width: 100%;       
     height: auto;        
-    display: none;       
+    display: block;       
 }
 
 .imagen-carrusel.activa {
     display: block;      
 }
 
+button {
+    position: absolute;
+    top: 50%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 24px;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.prev {
+    left: 10px;
+    transform: translateY(-50%);
+}
+
+.next {
+    right: 10px;
+    transform: translateY(-50%);
+}
+
+button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+---------------------------------------------------------------------
 
   font-family: 'Anton SC', sans-serif;
 }
