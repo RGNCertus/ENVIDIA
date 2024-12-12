@@ -104,3 +104,21 @@ app.listen(3000, () => {
     console.log('Servidor corriendo en http://localhost:3000');
 });
 
+let indice = 0;
+
+function cambiarImagen(direccion) {
+    const imagenes = document.querySelectorAll('.imagen');
+    const totalImagenes = imagenes.length;
+
+    indice += direccion;
+
+    if (indice < 0) {
+        indice = totalImagenes - 1; // Si es menor que 0, va a la última imagen
+    } else if (indice >= totalImagenes) {
+        indice = 0; // Si es mayor o igual al total, va a la primera imagen
+    }
+
+    // Desplazar las imágenes
+    const carruselImagenes = document.querySelector('.carrusel-imagenes');
+    carruselImagenes.style.transform = `translateX(-${indice * 100}%)`;
+}
